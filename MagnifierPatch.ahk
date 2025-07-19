@@ -1,13 +1,14 @@
 ﻿#NoEnv                      ; Recommended for performance and compatibility with future AHK versions
 #Warn                       ; Enable warnings for common errors
-SendMode Input              ; Faster and more reliable sending method
+SendMode Input              ; Faster and more reliable input method
 SetWorkingDir %A_ScriptDir% ; Start in script's own directory
 #SingleInstance Force       ; Prevent multiple script instances
 
 ; ---------------------------------------------------------------------
+; AltGr + =
+; Launch Magnifier if not running, then zoom in when retriggered
+; ---------------------------------------------------------------------
 
-; Hotkey: AltGr + =
-; Action: Launch Magnifier if not running, then zoom in when retriggered
 <^>!=::
 {
     if !WinExist("ahk_class MagUIClass ahk_exe Magnify.exe") {
@@ -19,8 +20,10 @@ SetWorkingDir %A_ScriptDir% ; Start in script's own directory
 return
 
 ; ---------------------------------------------------------------------
-; Hotkey: AltGr + -
-; Action: Zoom out
+; AltGr + -
+; Zoom out
+; ---------------------------------------------------------------------
+
 <^>!-::
 {
     Send, #-  ; Simulate Win + - (Zoom Out)
@@ -28,8 +31,10 @@ return
 return
 
 ; ---------------------------------------------------------------------
-; Hotkey: AltGr + Backspace
-; Action: Close Magnifier and exit fullscreen if active
+; AltGr + Backspace
+; Close Magnifier and exit fullscreen if active
+; ---------------------------------------------------------------------
+
 <^>!Backspace::
 {
     if WinExist("ahk_class MagUIClass ahk_exe Magnify.exe") {
