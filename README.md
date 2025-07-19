@@ -100,7 +100,7 @@ This avoids the need to stretch for awkward `Win`+key combos or manually open Ma
 
 ## 🧩 Tip: Start on Boot
 
-To have these scripts run automatically when you log in, place a shortcut to the `.ahk` file (or a compiled `.exe` version) in your Startup folder. Just palcing the `.ahk` file may also work.
+To have these scripts run automatically when you log in, place a shortcut to the `.ahk` file (or a compiled `.exe` version) in your Startup folder. Just placing the `.ahk` file may also work.
 
 🗂 **All Users Startup Folder:**
 
